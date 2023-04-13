@@ -103,14 +103,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Move spaceship in the clicked direction
-    private void clicked(String direction) {
-        if (direction.equals("right"))
-            gameManager.moveSpaceship(1);
-        else
-            gameManager.moveSpaceship(-1);
+    private void clicked(String tag) {
+        int direction = tag.equals("right") ? 1 : -1;
+        int layoutDirection = getResources().getConfiguration().getLayoutDirection();
+        if (layoutDirection == View.LAYOUT_DIRECTION_RTL) {
+            direction = -direction; // reverse direction in RTL layout
+        }
+        gameManager.moveSpaceship(direction);
         showSpaceshipRefresh(gameManager.getSpaceshipIndex());
     }
-
 
     // Set click listeners for arrow buttons
     private void setArrowsClickListeners() {
