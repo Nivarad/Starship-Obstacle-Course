@@ -12,24 +12,30 @@ public class GameManager {
     private final int NO_COLLISION_SCORE = 1;
 
     private int score;
-    private int[][] meteorPlaces=new int[4][3];
+    private int[][] meteorPlaces=new int[4][5];
+
+    private int[][] bitcoinPlaces = new int[4][5];
     private int spaceshipIndex;
     private int life;
     private int collision;
+
+    private int coinsCollected;
 
 
     public GameManager(int life) {
         this.life = life;
         this.score = 0;
         this.collision = 0;
-        this.spaceshipIndex=1;
+        this.spaceshipIndex=2;
+        this.coinsCollected=0;
         resetMeteors();
+        resetBitcoins();
     }
     public int getScore() {
         return score;
     }
     public void resetSpaceship(){
-        spaceshipIndex=1;
+        spaceshipIndex=2;
     }
     public void resetMeteors(){
         for(int i=0;i<meteorPlaces.length;i++){
@@ -38,9 +44,17 @@ public class GameManager {
             }
         }
     }
-    public void addMeteor(){
+    public void resetBitcoins(){
+        for(int i=0;i<bitcoinPlaces.length;i++){
+            for(int j=0;j<bitcoinPlaces[0].length;j++){
+                bitcoinPlaces[i][j]=0;
+            }
+        }
+    }
+    public void addMeteorAndBitcoin(){
+        //find space for next meteor
         Random rand = new Random();
-        int meteorIndex = rand.nextInt(3);
+        int meteorIndex = rand.nextInt(meteorPlaces[0].length);
 
         for(int i=meteorPlaces.length-1;i>=1;i--){
             for(int j=0;j<meteorPlaces[0].length;j++){
@@ -52,10 +66,25 @@ public class GameManager {
             meteorPlaces[0][i]=0;
         }
         meteorPlaces[0][meteorIndex]=1;
-//        printMatrix(meteorPlaces);
-//        System.out.println("\n\n");
+
+        //find space for new bitcoin which isn't the meteor place
+        int bitcoinIndex=-1;
+        while(bitcoinIndex<0 || bitcoinIndex==meteorIndex){
+            bitcoinIndex=rand.nextInt(bitcoinPlaces[0].length*3);
+        }
+        for(int i=bitcoinPlaces.length-1;i>=1;i--){
+            for(int j=0;j<bitcoinPlaces[0].length;j++){
+                bitcoinPlaces[i][j] = bitcoinPlaces[i-1][j];
+            }
+        }
+
+        for(int i=0;i<bitcoinPlaces[0].length;i++){
+            bitcoinPlaces[0][i]=0;
+        }
+        if(bitcoinPlaces[0].length>bitcoinIndex)
+        bitcoinPlaces[0][bitcoinIndex]=1;
     }
-    public boolean checkCollision(Context context, Vibrator v){
+    public boolean checkMeteorCollision(Context context, Vibrator v){
         int lastLine = meteorPlaces.length-1;
         if(meteorPlaces[lastLine][spaceshipIndex]>0){
             this.collision++;
@@ -68,7 +97,15 @@ public class GameManager {
             return true;
         }
         this.score+=NO_COLLISION_SCORE;
+
+        checkBitcoinCollision();
         return false;
+    }
+    public void checkBitcoinCollision() {
+        int lastLine = bitcoinPlaces.length - 1;
+        if (bitcoinPlaces[lastLine][spaceshipIndex] > 0) {
+            this.coinsCollected++;
+        }
     }
 
 
@@ -84,8 +121,8 @@ public class GameManager {
     public void moveSpaceship(int direction){
         if(spaceshipIndex==0 && direction ==-1)
             spaceshipIndex=0;
-        else if(spaceshipIndex==2 && direction ==1)
-            spaceshipIndex=2;
+        else if(spaceshipIndex== meteorPlaces[0].length-1 && direction ==1)
+            spaceshipIndex= meteorPlaces[0].length-1;
         else{
             spaceshipIndex+=direction;
         }
@@ -97,6 +134,7 @@ public class GameManager {
     public int[][] getMeteorPlaces(){
         return meteorPlaces;
     }
+    public int[][] getBitcoinPlaces(){return bitcoinPlaces;}
     private void printMatrix(int[][] mat){
 
 
@@ -109,10 +147,12 @@ public class GameManager {
             }
             System.out.println();
         }
-
-
-
     }
+    public int getCoinsCollected(){
+        return this.coinsCollected;
+    }
+
+
 
 
 }

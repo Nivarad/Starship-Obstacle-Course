@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_200"
+    tools:context=".Models.MenuActivity">
+
+
+    <ImageView
+        android:id="@+id/im1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        tools:layout_editor_absoluteX="205dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="40dp"
+        android:text="Difficulty : "
+        android:textColor="#E7B10A"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_alignLeft="@id/text_difficulty"
+        android:layout_below="@id/text_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="151dp"
+        tools:ignore="MissingConstraints">
+
+    <RadioButton
+        android:id="@+id/fastRB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fast"
+        android:layout_margin="20dp"
+        android:checked="false"
+        android:textColor="#E7B10A"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <RadioButton
+        android:id="@+id/normalRB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal"
+        android:layout_margin="20dp"
+        android:checked="true"
+        android:textColor="#E7B10A"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_sensors"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Sensors Mode : "
+        android:textColor="#E7B10A"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/sensorCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_sensors"
+        android:text="On"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#E7B10A"
+        android:layout_margin="40dp"
+        />
+
+    <Button
+        android:id="@+id/startgameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#E7B10A"
+        android:clickable="true"
+        android:onClick="startGame"
+        android:text="Game Start"
+        android:textColor="@color/black"
+        android:textSize="50sp" />
+
+</RelativeLayout>

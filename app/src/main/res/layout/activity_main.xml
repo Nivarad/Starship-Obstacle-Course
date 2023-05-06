@@ -57,117 +57,358 @@
         android:textSize="32sp"
         android:textStyle="bold" />
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_coins"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:paddingLeft="20dp"
+        android:text="000"
+        android:textColor="#E7B10A"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
+        android:layout_width="362dp"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="70dp"
         android:layout_marginBottom="0dp"
-        android:columnCount="3"
+        android:columnCount="5"
         android:rowCount="5">
-
 
         <ImageView
             android:id="@+id/meteor00"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="0"
             android:layout_column="0"
-
             app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin00"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            app:srcCompat="@drawable/bitcoin" />
 
         <ImageView
             android:id="@+id/meteor01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="0"
             android:layout_column="1"
             app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin01"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            app:srcCompat="@drawable/bitcoin" />
 
         <ImageView
             android:id="@+id/meteor02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="0"
             android:layout_column="2"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin02"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor03"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin03"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            app:srcCompat="@drawable/bitcoin" />
+
+
+
+        <ImageView
+            android:id="@+id/meteor04"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="4"
+            app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin04"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="0"
+            android:layout_column="4"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/meteor10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="1"
             android:layout_column="0"
             app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin10"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            app:srcCompat="@drawable/bitcoin" />
 
         <ImageView
             android:id="@+id/meteor11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="1"
             android:layout_column="1"
             app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin11"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            app:srcCompat="@drawable/bitcoin" />
 
         <ImageView
             android:id="@+id/meteor12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="1"
             android:layout_column="2"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin12"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor13"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            app:srcCompat="@drawable/meteor" />
+
+
+        <ImageView
+            android:id="@+id/bitcoin13"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor14"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="4"
+            app:srcCompat="@drawable/meteor" />
+
+
+        <ImageView
+            android:id="@+id/bitcoin14"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="1"
+            android:layout_column="4"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/meteor20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="2"
             android:layout_column="0"
             app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin20"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            app:srcCompat="@drawable/bitcoin" />
 
         <ImageView
             android:id="@+id/meteor21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="2"
             android:layout_column="1"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin21"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/meteor22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="2"
             android:layout_column="2"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin22"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor23"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="3"
+            app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin23"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="3"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor24"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="4"
+            app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin24"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="2"
+            android:layout_column="4"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/meteor30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="3"
             android:layout_column="0"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin30"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/meteor31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="3"
             android:layout_column="1"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin31"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/meteor32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="3"
             android:layout_column="2"
             app:srcCompat="@drawable/meteor" />
 
         <ImageView
+            android:id="@+id/bitcoin32"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor33"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            app:srcCompat="@drawable/meteor" />
+
+        <ImageView
+            android:id="@+id/bitcoin33"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="3"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
+            android:id="@+id/meteor34"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="4"
+            app:srcCompat="@drawable/meteor" />
+
+
+        <ImageView
+            android:id="@+id/bitcoin34"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="3"
+            android:layout_column="4"
+            app:srcCompat="@drawable/bitcoin" />
+
+        <ImageView
             android:id="@+id/spaceship0"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="103dp"
             android:layout_row="4"
             android:layout_column="0"
@@ -175,7 +416,7 @@
 
         <ImageView
             android:id="@+id/spaceship1"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="103dp"
             android:layout_row="4"
             android:layout_column="1"
@@ -183,10 +424,25 @@
 
         <ImageView
             android:id="@+id/spaceship2"
-            android:layout_width="wrap_content"
-            android:layout_height="104dp"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
             android:layout_row="4"
             android:layout_column="2"
+            app:srcCompat="@drawable/spaceship" />
+
+        <ImageView
+            android:id="@+id/spaceship3"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="4"
+            android:layout_column="3"
+            app:srcCompat="@drawable/spaceship" />
+        <ImageView
+            android:id="@+id/spaceship4"
+            android:layout_width="60dp"
+            android:layout_height="103dp"
+            android:layout_row="4"
+            android:layout_column="4"
             app:srcCompat="@drawable/spaceship" />
 
 
